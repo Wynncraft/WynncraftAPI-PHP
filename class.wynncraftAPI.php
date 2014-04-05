@@ -66,7 +66,6 @@ class wynncraftAPI
 
         curl_close($ch);
 
-
         // Handle formatting
         if ($this->apiFormat === 'object') {
             $apiQuery = json_decode($apiQuery);
