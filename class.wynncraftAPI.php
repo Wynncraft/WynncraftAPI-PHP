@@ -86,7 +86,7 @@ class wynncraftAPI
      * @throws Exception
      */
     public function playerStats($username) {
-        return $this->apiCommand("playerStats", $username);
+        return $this->apiCommand('playerStats', $username);
     }
 
     /**
@@ -96,7 +96,7 @@ class wynncraftAPI
      * @throws Exception
      */
     public function onlinePlayers() {
-        return $this->apiCommand("onlinePlayers");
+        return $this->apiCommand('onlinePlayers');
     }
 
     /**
@@ -106,7 +106,7 @@ class wynncraftAPI
      * @throws Exception
      */
     public function onlinePlayersSum() {
-        return $this->apiCommand("onlinePlayersSum");
+        return $this->apiCommand('onlinePlayersSum');
     }
 
     /**
@@ -117,7 +117,7 @@ class wynncraftAPI
      * @throws Exception
      */
     public function pvpLeaderboard($type = null) {
-        return $this->apiCommand("pvpLeaderboard", $type);
+        return $this->apiCommand('pvpLeaderboard', $type);
     }
 
 }
