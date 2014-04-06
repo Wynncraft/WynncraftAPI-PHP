@@ -24,6 +24,10 @@ class wynncraftAPI
 
     /**
      * Create a new class instance
+     *  - There are 3 available $apiFormats
+     *    - 'string'|null : returns as a json document (default)
+     *    - 'array' : returns as a php array
+     *    - 'object' : returns as as a php object
      *
      * @param string $apiFormat
      * @throws Exception
@@ -102,7 +106,7 @@ class wynncraftAPI
     }
 
     /**
-     * Return a JSON document will a sum of all online players
+     * Return a JSON document with a sum of all online players
      *
      * @return array|mixed|string
      * @throws Exception
@@ -112,7 +116,11 @@ class wynncraftAPI
     }
 
     /**
-     * Return a JSON document with pvp statistic data
+     * Return a JSON document with pvp statistic data (max limit 100)
+     *  - There are 3 $type options:
+     *    - 'global'|null : returns all time stats (default)
+     *    - 'daily' : returns today's stats
+     *    - 'weekly' : returns this week's stats
      *
      * @param null $type
      * @param null $limit
@@ -121,6 +129,21 @@ class wynncraftAPI
      */
     public function pvpLeaderboard($type = null, $limit = null) {
         return $this->apiCommand('pvpLeaderboard', $type, $limit);
+    }
+    
+    /**
+     * Return a JSON document with items based on a filter
+     * - There is a smart $filter:
+     *   - An integer will search for min lvl
+     *   - An item type will search for all items with that type
+     *   - A quality will search search for all items with that quality
+     *
+     * @param string $filter
+     * @return array|mixed|string
+     * @throws Exception
+     */
+    public function onlinePlayersSum($filter) {
+        return $this->apiCommand('items', $filter);
     }
 
 }
