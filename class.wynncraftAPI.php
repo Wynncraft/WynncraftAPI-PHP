@@ -142,7 +142,7 @@ class wynncraftAPI
      * @return array|mixed|string
      * @throws Exception
      */
-    public function onlinePlayersSum($filter) {
+    public function searchItems($filter) {
         return $this->apiCommand('items', $filter);
     }
 
