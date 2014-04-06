@@ -43,15 +43,17 @@ class wynncraftAPI
      *
      * @param $action
      * @param null $command
+     * @param null $limit
      * @return array|mixed|string
      * @throws Exception
      */
-    protected function apiCommand($action, $command = null)
+    protected function apiCommand($action, $command = null, $limit = null)
     {
         // Build the http query to the api
         $apiQuery = array(
             'action' => $action,
             'command' => $command,
+            'limit' => $limit
         );
         $apiQuery = http_build_query($apiQuery);
 
@@ -113,11 +115,12 @@ class wynncraftAPI
      * Return a JSON document with pvp statistic data
      *
      * @param null $type
+     * @param null $limit
      * @return array|mixed|string
      * @throws Exception
      */
-    public function pvpLeaderboard($type = null) {
-        return $this->apiCommand('pvpLeaderboard', $type);
+    public function pvpLeaderboard($type = null, $limit = null) {
+        return $this->apiCommand('pvpLeaderboard', $type, $limit);
     }
 
 }
