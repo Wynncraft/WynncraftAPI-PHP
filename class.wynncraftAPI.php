@@ -1,6 +1,8 @@
 <?php
 /**
  * A Wynncraft API interface for PHP
+ * 
+ * - Docs avaulable for the API @ <http://wynncraft.github.io/APIDocs/>
  *
  * @author Chris Ireland <ireland63@gmail.com>
  * @license MIT <http://opensource.org/licenses/MIT>
@@ -13,7 +15,7 @@ class wynncraftAPI
      *
      * @var string
      */
-    private $apiUrl = 'http://wynncraft.com/api/public_api.php?';
+    private $apiUrl = 'http://api.wynncraft.com/public_api.php?';
 
     /**
      * The format the api call should be returned as
