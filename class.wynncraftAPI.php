@@ -15,7 +15,7 @@ class wynncraftAPI
      *
      * @var string
      */
-    private $apiUrl = 'http://api.wynncraft.com/public_api.php?';
+    private const apiUrl = 'http://api.wynncraft.com/public_api.php?';
 
     /**
      * The format the api call should be returned as
