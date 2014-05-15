@@ -13,9 +13,9 @@ class wynncraftAPI
     /**
      * Url to the api
      *
-     * @var string
+     * @const string
      */
-    private const apiUrl = 'http://api.wynncraft.com/public_api.php?';
+    const apiUrl = 'http://api.wynncraft.com/public_api.php?';
 
     /**
      * The format the api call should be returned as
@@ -64,7 +64,7 @@ class wynncraftAPI
         $apiQuery = http_build_query($apiQuery);
 
         // Query the api and fetch the response
-        $ch = curl_init($this->apiUrl . $apiQuery);
+        $ch = curl_init(self::apiUrl . $apiQuery);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $apiQuery = curl_exec($ch);
