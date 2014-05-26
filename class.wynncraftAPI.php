@@ -2,7 +2,7 @@
 /**
  * A Wynncraft API interface for PHP
  * 
- * - Docs avaulable for the API @ <http://wynncraft.github.io/APIDocs/>
+ * - Docs available for the API @ <http://docs.wynncraft.com/>
  *
  * @author Chris Ireland <ireland63@gmail.com>
  * @license MIT <http://opensource.org/licenses/MIT>
