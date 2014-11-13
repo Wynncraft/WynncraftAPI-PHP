@@ -147,5 +147,16 @@ class wynncraftAPI
     public function searchItems($filter) {
         return $this->apiCommand('items', $filter);
     }
+    
+    /**
+     * Return a JSON document with a guild's stats
+     *
+     * @param $guild
+     * @return array|mixed|string
+     * @throws Exception
+     */
+    public function playerStats($guild) {
+        return $this->apiCommand('guildStats', $guild);
+    }
 
 }
