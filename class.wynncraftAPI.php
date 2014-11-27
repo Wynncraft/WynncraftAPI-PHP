@@ -155,7 +155,7 @@ class wynncraftAPI
      * @return array|mixed|string
      * @throws Exception
      */
-    public function playerStats($guild) {
+    public function guildStats($guild) {
         return $this->apiCommand('guildStats', $guild);
     }
 
