@@ -158,5 +158,15 @@ class wynncraftAPI
     public function guildStats($guild) {
         return $this->apiCommand('guildStats', $guild);
     }
-
+    
+    /**
+     * Return a JSON document with a list of guilds
+     *
+     * @return array|mixed|string
+     * @throws Exception
+     */
+    public function guildList()) {
+        return $this->apiCommand('guildList');
+    }
+    
 }
