@@ -168,5 +168,21 @@ class wynncraftAPI
     public function guildList()) {
         return $this->apiCommand('guildList');
     }
+
+    /**
+     * Return a JSON document with wf statistic data (max limit 100)
+     *  - There are 3 $type options:
+     *    - 'global'|null : returns all time stats (default)
+     *    - 'daily' : returns today's stats
+     *    - 'weekly' : returns this week's stats
+     *
+     * @param null $type
+     * @param null $limit
+     * @return array|mixed|string
+     * @throws Exception
+     */
+    public function wfLeaderboard($type = null, $limit = null) {
+        return $this->apiCommand('wfLeaderboard', $type, $limit);
+    }
     
 }
