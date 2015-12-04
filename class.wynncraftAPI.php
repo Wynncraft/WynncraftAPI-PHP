@@ -15,7 +15,7 @@ class wynncraftAPI
      *
      * @const string
      */
-    const apiUrl = 'http://api.wynncraft.com/public_api.php?';
+    const apiUrl = 'https://api.wynncraft.com/public_api.php?';
 
     /**
      * The format the api call should be returned as
@@ -165,7 +165,7 @@ class wynncraftAPI
      * @return array|mixed|string
      * @throws Exception
      */
-    public function guildList()) {
+    public function guildList() {
         return $this->apiCommand('guildList');
     }
 
